@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Socket.io + NodeJs</title>
+    <style>
+        body{
+            padding: 1rem 20rem 0 2rem;
+            background: #240747;
+            color: #F6E4AD;
+        }
+        input{
+            height: 30px;
+            width: 70%;
+            vertical-align: middle;
+        }
+        .messages{
+            width: 80%;
+            height: 300px;
+        }
+        #connectBtn{
+            min-width:180px;
+            vertical-align: middle;
+            height: 36px;
+            line-height: 36px;
+            font-size: 20px;
+            background: #EA5455;
+            color: #ffffff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>登录</h2>
+        <label>
+            <input id="name" />
+            <button id="connectBtn">确定</button>
+        </label>
+    </form>
+    <h2>接受到的消息:</h2>
+    <p>
+        <textarea class="messages" id="messages"></textarea>
+    </p>
+    <script src="./client.bundle.js"></script>
+</body>
+</html>

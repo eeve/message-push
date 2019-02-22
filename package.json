@@ -1,0 +1,38 @@
+{
+  "name": "message",
+  "version": "1.0.0",
+  "description": "nodejs + socket.io",
+  "main": "index.js",
+  "scripts": {
+    "watch": "cd public && webpack-dev-server --hot --progress --colors",
+    "build": "cd public && webpack --progress --colors --watch",
+    "gulp": "cd public && gulp",
+    "dist": "cd public && NODE_ENV=production webpack --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "socket.io",
+    "message",
+    "push"
+  ],
+  "author": "eeve",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.0",
+    "cookie": "^0.3.1",
+    "express": "^4.13.4",
+    "pug": "^2.0.0-alpha8",
+    "push.js": "0.0.8",
+    "request": "^2.72.0",
+    "socket.io": "^1.4.6",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2",
+    "push.js": "0.0.8",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

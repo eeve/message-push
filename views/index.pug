@@ -1,0 +1,114 @@
+extends layout
+
+block style
+    style.
+        body{
+            background: #2D4059;
+            color: #ffffff;
+            padding: 3rem 2rem;
+        }
+        hr{
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+        }
+        .box{
+            margin-bottom: 5rem;
+            padding: 2rem;
+            border: 1px solid #ffffff;
+        }
+        #tj li{
+            list-style: none;
+            margin-bottom: 0.6rem;
+        }
+        #tj li span{
+            margin-left: 0.5rem;
+        }
+
+        #tj .num{
+            color: #EA5455;
+            background: #FFD460;
+            padding: 0 0.3rem;
+        }
+        #subscribe{
+            padding: 2rem;
+            margin: 1rem 0;
+            border: 1px solid #FFD460;
+        }
+        #sendBtn{
+            min-width:180px;
+            height: 40px;
+            font-size: 24px;
+            padding: 0.3rem 0.6rem;
+            background: #EA5455;
+            color: #ffffff;
+            border: none;
+        }
+        #sendForm{
+            margin-top: 2rem;
+        }
+        .group{
+            padding: 0.2rem 0;
+            margin-bottom: 1rem;
+        }
+        .group label{
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+            padding-right: 2rem;
+        }
+        .group input{
+            height: 30px;
+            width: 80%;
+            padding: 0 1rem;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .group.btns{
+            text-align: center;
+        }
+        .group.btns button{
+            outline: none;
+        }
+        .footer{
+            padding: 3rem 0 1rem 0;
+        }
+        .footer p{
+            text-align: center;
+        }
+block script
+    script(src='/static/console.bundle.js')
+
+block content
+    .box
+        h1 监控系统
+        hr
+
+        h2 数量统计
+        ul#tj
+            li 订阅者
+                span.num#subs
+            li 发布者
+                span.num#publish
+            li 监控者
+                span.num#monitor
+
+    .box
+        h1 推送系统
+        hr
+
+        form#sendForm
+            label 所有目标订阅者
+                #subscribe
+            .group
+                label 推送目标订阅者
+                input(name="to", id="to", placeholder="从上面拷贝一个")
+            .group
+                label 推送消息内容
+                input(name="message", id="message", placeholder="输入要推送的内容")
+            .group.btns
+                button#sendBtn 推
+    .footer
+        p   Copyright &copy;2016 Code By EEVE
+
+
